@@ -1,5 +1,5 @@
 
-name: Build VK locesAndroid APK
+name: Build VK loces APK
 
 on:
   workflow_dispatch:
