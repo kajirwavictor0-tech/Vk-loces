@@ -1,4 +1,5 @@
-name: Build Vic Location APK
+
+name: Build VK LOCES Android APK
 
 on:
   workflow_dispatch:
@@ -14,7 +15,6 @@ jobs:
       - name: Extract project ZIP
         run: |
           unzip -q VicLocation_Android_Project.zip -d project
-          find project -maxdepth 4 -type f
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -36,6 +36,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: VicLocation-APK
+          name: VK-LOCES-Android
           path: project/**/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+          
